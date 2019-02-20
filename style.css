@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+.row {
+  height: 50px;
+  display: flex;
+}
+.column {
+  flex: 1; 
+  border: 1px solid rgb(97, 95, 95);
+  background-color: #f1f1f1;
+  box-sizing: border-box;
+}
+.column:hover {
+  background-color: #f7df0f;
+}
+.btn-end {
+  width: 100px;
+  height: 40px;
+  background-color: yellow;
+  border-radius: 5px;
+  border: none; 
+  position: absolute;
+  top: 270px;
+  left: 650px;
+  transform: translateX(-50%);
+  transition: .3s all;
+}
+
+.btn-end:hover {
+  transform: translateX(-50%) scale(1.1);
+}
+
+.dot {
+  z-index: 99999999;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: black;
+  position: absolute;
+}
+
+.red {
+  background-color: red;
+}
