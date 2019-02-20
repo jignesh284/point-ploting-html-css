@@ -45,6 +45,3 @@ function columnClick(e) {
   }
 }
 
-//https://pythonhosted.org/watchdog/
-//https://blog.mounirmesselmeni.de/2012/11/20/reading-csv-file-with-javascript-and-html5-file-api/
-//https://blog.teamtreehouse.com/reading-files-using-the-html5-filereader-api

@@ -19,4 +19,8 @@
 
 # we are good to GO!!
 
+#References
+1. https://pythonhosted.org/watchdog/
+2. https://api.jquery.com/
+
 
