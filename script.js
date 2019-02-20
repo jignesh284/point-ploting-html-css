@@ -30,14 +30,16 @@ function columnClick(e) {
     body.append('<div class="dot" style="top:'+e.clientY + 'px; left:'+ e.clientX +'px; " />')
     let x = (e.clientX - OFFSET_MARGIN_X)/CELL_SIZE;
     let y = (e.clientY - OFFSET_MARGIN_Y)/CELL_SIZE;
+    //console.log(e.clientX+" :: "+e.clientY)
     console.log([x, y]);
     let url = BASE_URL+`?x=${x}&y=${y}`
     $.ajax({
       url: url,
       success: function(response) {
         if(response.success == true) {
-          newx = (response.x * CELL_SIZE + OFFSET_MARGIN_X);
-          newy = (response.y * CELL_SIZE + OFFSET_MARGIN_Y);
+          newx = (response.x * CELL_SIZE) + OFFSET_MARGIN_X;
+          newy = (response.y * CELL_SIZE) + OFFSET_MARGIN_Y;
+          //console.log(newx+" :: "+newy);
           body.append('<div class="dot red" style="top:'+newy + 'px; left:'+ newx +'px; " />')
         }
       }

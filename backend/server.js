@@ -16,6 +16,7 @@ var server = http.createServer(async function (req, res) {
 
     let x = parseFloat(query.x);
     let y = parseFloat(query.y);
+    //console.log({x,y});
 
     content = `( ${x}, ${y} )`+"\n";
     fs.appendFile(PATH, content, function(err){
@@ -26,9 +27,9 @@ var server = http.createServer(async function (req, res) {
 
       let newx = x+1;
       let newy = y-1;
-      
+      //console.log({newx,newy});
       res.writeHead(200, { "Content-Type": "application/json" });
-      payload  = {"success": true, "x": newx, "y": newx};
+      payload  = {"success": true, "x": newx, "y": newy};
 
       //If the point is in the range the send a success message with new cordinates
       //else Print the cordinates are not accessible 
