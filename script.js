@@ -2,6 +2,24 @@ var button = $(".btn-end");
 var column = $(".column"); 
 var body = $("body");
 const BASE_URL = "http://localhost:5000";
+var xTrack = $( ".xTrack" );
+var yTrack = $( ".yTrack" );
+var container = $( ".container" );
+
+container.mousemove(function( event ) {
+  xTrack.css("top", event.pageY+"px"  );
+  yTrack.css("left", event.pageX+"px"  );
+});
+
+xTrack.mousemove(function( event ) {
+  xTrack.css("top", event.pageY+"px"  );
+  yTrack.css("left", event.pageX+"px"  );
+});
+
+yTrack.mousemove(function( event ) {
+  xTrack.css("top", event.pageY+"px"  );
+  yTrack.css("left", event.pageX+"px"  );
+});
 
 //Offset for the container
 const OFFSET_MARGIN_X = 50;
@@ -9,7 +27,8 @@ const OFFSET_MARGIN_Y = 50;
 const CELL_SIZE = 50;
 
 button.on("click", endButtonClick);
-column.on("click", columnClick);
+xTrack.on("click", columnClick);
+yTrack.on("click", columnClick);
 var isSessionOn = true;
 
 //endButtonClick:: it will sent the session value false.

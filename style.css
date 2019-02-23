@@ -15,13 +15,13 @@
 }
 .column {
   flex: 1; 
-  border: 1px solid rgb(97, 95, 95);
+  border: 1px solid rgb(97, 95, 95); 
   background-color: #f1f1f1;
   box-sizing: border-box;
 }
-.column:hover {
+/* .column:hover {
   background-color: #f7df0f;
-}
+} */
 .btn-end {
   width: 100px;
   height: 40px;
@@ -40,7 +40,7 @@
 }
 
 .dot {
-  z-index: 99999999;
+  z-index: 1;
   width: 5px;
   height: 5px;
   border-radius: 50%;
@@ -50,4 +50,24 @@
 
 .red {
   background-color: red;
+}
+
+.xTrack {
+  z-index: 100;
+  display: inline-block;
+  position: absolute;
+  width: 500px;
+  height: 2px;
+  left: 50px;
+  background-color: green;
+}
+
+.yTrack {
+  z-index: 100;
+  display: inline-block;
+  position: absolute;
+  top: 50px;
+  width: 2px;
+  height: 500px;
+  background-color: green;
 }
